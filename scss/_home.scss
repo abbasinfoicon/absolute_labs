@@ -1,0 +1,92 @@
+header,
+footer,
+section {
+    @include full-width;
+}
+
+// title
+.title {
+    position: relative;
+
+    h3 {
+        font-size: 42.09px;
+        color: $black;
+        @include campton(light300);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+
+        @include mq(max, 1499px) {
+            font-size: 34.09px;
+        }
+
+        @include mq(max, 1199px) {
+            font-size: 27px;
+        }
+
+        span {
+            display: block;
+            font-size: 63.92px;
+            @include campton(bold700);
+            margin-top: -8px;
+            margin-bottom: -8px;
+
+            @include mq(max, 1499px) {
+                font-size: 50.92px;
+            }
+            @include mq(max, 1199px) {
+                font-size: 40.92px;
+            }
+
+            span{
+                @include campton(light300);
+                display: inline-block;
+            }
+        }
+    }
+
+    &.fsize63 {
+        h3{
+            font-size: 63.92px;
+
+            @include mq(max, 1499px) {
+                font-size: 50.92px;
+            }
+            @include mq(max, 1199px) {
+                font-size: 40.92px;
+            }
+        }
+    }
+
+    h4 {
+        font-size: 24px;
+        color: $royal;
+        @include MyriadPro(Semibold);
+        margin-bottom: 10px;
+
+        @include mq(max, 1499px) {
+            font-size: 19px;
+        }
+
+        @include mq(max, 1199px) {
+            font-size: 15px;
+        }
+    }
+
+    p {
+        font-size: 24px;
+        color: $black;
+        @include MyriadPro(regular400);
+
+        @include mq(max, 1499px) {
+            font-size: 19px;
+        }
+
+        @include mq(max, 1199px) {
+            font-size: 15px;
+        }
+
+        span {
+            @include MyriadPro(bold700);
+        }
+    }
+}

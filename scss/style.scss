@@ -1,0 +1,111 @@
+@import "variables";
+@import "fonts";
+@import "mixin";
+
+/*=====================================================================
+==========================   main-css-all-pages  =========================
+========================================================================*/
+
+body {
+  @include full-width;
+  margin: 0;
+  padding: 0;
+  @include MyriadPro(regular400);
+}
+
+.container {
+  @include mq(min, 1366px){
+    max-width: 1313px;
+  }
+
+  @include mq(min, 1500px){
+    max-width: 1475px;
+  }
+
+  @include mq(max, 767px){
+    max-width: 100%;
+  }
+}
+/*=====================================================================
+==========================   font-face  =========================
+========================================================================*/
+
+
+a,
+a:hover,
+a:active,
+a:focus,
+a:link,
+a:visited {
+  text-decoration: none;
+  @include transition(.5s);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+}
+
+.vertical-block {
+  @include full-width;
+  display: table;
+  height: 100%;
+
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+//btn
+button,
+.btn,
+.form-control,
+input {
+  @include border-radius(0);
+  @include box-shadow(none);
+
+
+  &:focus,
+  &:active,
+  &:visited {
+    outline: none;
+    @include box-shadow(none);
+  }
+}
+
+
+
+
+//main-scss
+
+@import "topToBottom";
+@import "preloader";
+@import "header";
+@import "slider";
+@import "gradient_btn";
+@import "commandChain";
+@import "chain";
+@import "know_where";
+@import "right_wallets";
+@import "unbound";
+@import "community";
+@import "informed";
+@import "home";
+@import "footer";

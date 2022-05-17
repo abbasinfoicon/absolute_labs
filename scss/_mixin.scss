@@ -1,0 +1,572 @@
+/*=====================================================================
+==========================   all-mixing-scss  =========================
+========================================================================*/
+
+//full-width
+@mixin full-width {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+//@include full-width;
+
+//Images-center
+@mixin img-center($position) {
+  position: absolute;
+
+  @if $position =='vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  @else if $position =='horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+
+  @else if $position =='both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+//@include img-center(both);
+
+
+// box-shadow
+@mixin box-shadow($boxshadow) {
+  box-shadow: $boxshadow;
+  -webkit-box-shadow: $boxshadow;
+  -ms-box-shadow: $boxshadow;
+  -moz-box-shadow: $boxshadow;
+  -o-box-shadow: $boxshadow;
+}
+
+//@include box-shadow(0px 0px 10px #000);
+
+// text-shadow
+@mixin text-shadow($txtshadow) {
+  text-shadow: $txtshadow;
+  -webkit-text-shadow: $txtshadow;
+  -ms-text-shadow: $txtshadow;
+  -moz-text-shadow: $txtshadow;
+  -o-text-shadow: $txtshadow;
+}
+
+//@include text-shadow(0px 0px 10px #000);
+
+// border-radius
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+//@include border-radius(22px);
+
+// gradient-linear
+@mixin gradient-linear($clr, $secclr, $nxtclr, $dirction) {
+  @if $dirction =='vertical' {
+    background: $clr;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #{$clr} 0%, #{$secclr} 50%, #{$nxtclr} 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #{$clr} 0%, #{$nxtclr} 50%, #{$secclr} 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #{$clr} 0%, #{$secclr} 50%, #{$nxtclr} 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$clr}', endColorstr='#{$nxtclr}', GradientType=0);
+    /* IE6-9 */
+  }
+
+  @else if $dirction =='horizontal' {
+    background: $clr;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #{$clr} 0%, #{$secclr} 50%, #{$nxtclr} 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #{$clr} 0%, #{$nxtclr} 50%, #{$secclr} 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #{$clr} 0%, #{$secclr} 50%, #{$nxtclr} 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$clr}', endColorstr='#{$nxtclr}', GradientType=0);
+    /* IE6-9 */
+  }
+}
+
+//@include gradient-linear(#f00, #000);
+
+//img-url-extantion
+@mixin imgurl($img, $extension){
+background-image: url('../img/' + $img + '.' + $extension);
+}
+
+//@include imgurl(logo, png, no-repeat, #f00);
+
+// background size
+@mixin bg-cover($cover) {
+  -moz-background-size: $cover;
+  -o-background-size: $cover;
+  -ms-background-size: $cover;
+  -webkit-background-size: $cover;
+  background-size: $cover;
+}
+
+//@include bg-cover;  => background-size: cover;
+
+// transition
+@mixin transition($transition) {
+  transition: $transition;
+  -webkit-transition: $transition;
+  -ms-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+}
+
+// @include transition(all 1s); <- how to use this mixin
+
+// transform-origin
+@mixin transform-origin($origin) {
+  transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+}
+
+//@include transform-origin(center/buttom/left....);
+
+// transform
+@mixin transform($transforms) {
+  transform: $transforms;
+  -webkit-transform: $transforms;
+  -ms-transform: $transforms;
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+}
+
+//@include transform(translate(-50%,-50%));
+
+// rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// @include rotate(45); <- how to use this mixin
+
+// skew
+@mixin skewy($degval) {
+  @include transform(skewy(#{$degval}deg));
+}
+
+// @include skewy(5); <- how to use this mixin
+
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// @include scale(2); <- how to use this mixin
+
+
+// MyriadPro 
+@mixin MyriadPro($type) {
+  @if $type =='light300' {
+    font-family: 'Myriad Pro Light';
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @if $type =='regular400' {
+    font-family: 'Myriad Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @else if $type =='Semibold' {
+    font-family: 'Myriad Pro Semibold';
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @else if $type =='bold700' {
+    font-family: 'Myriad Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @else {
+    font-family: 'Myriad Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+  }
+}
+
+// campton
+@mixin campton($type) {
+  @if $type =='light300' {
+    font-family: 'Campton-light';
+    font-weight: 300;
+  }
+
+  @else if $type =='bold700' {
+    font-family: 'Campton-bold';
+    font-weight: 700;
+  }
+
+  @else if $type =='black' {
+    font-family: 'Campton-black';
+    font-weight: 900;
+  }
+
+  @else {
+    font-family: 'Campton-light';
+  }
+}
+
+//@include campton(light100/.../black900);
+
+@mixin spacing($place, $m-direction, $m-amount:null) {
+  @if $m-direction ==all {
+    #{$place}: $m-amount;
+  }
+
+  @else {
+    #{$place}-#{$m-direction}: $m-amount;
+  }
+}
+
+//overlay
+@mixin overlay() {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+//@include overlay;
+
+//link-ancher
+@mixin linx($link, $hover, $visit, $active) {
+  a {
+    color: $link;
+
+    &:hover {
+      color: $hover;
+    }
+
+    &:visited {
+      color: $visit;
+    }
+
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+//@include linx(#f00, #f0f, #ff0, #ff0);
+
+//clearfix
+@mixin clearfix() {
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//@include clearfix
+
+//background-gradient-color
+@mixin background-gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+
+  @if $orientation =='vertical' {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  }
+
+  @else if $orientation =='horizontal' {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  }
+
+  @else {
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+
+//@include background-gradient(red, black, 'vertical');
+
+@mixin config-icon-colors($prefix, $colors...) {
+  @each $i in $colors {
+    .#{$prefix}#{nth($i, 1)} {
+      color: nth($i, 2);
+    }
+  }
+}
+
+//@include config-icon-colors('icon-', 'save' green, 'cancel' gray, 'delete' red);
+/* output CSS
+.icon-save {
+  color: green;
+}
+.icon-cancel {
+  color: gray;
+}
+.icon-delete {
+  color: red;
+} */
+
+//scroll-body
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+
+  // For Google Chrome
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    @include border-radius(10);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+//@include scrollbars(.5em, slategray);
+
+//circle-full
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  -webkit-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+
+//@include circle(100);
+
+//css3-propertisc all browser support
+@mixin css3($property, $value) {
+
+  @each $prefix in -webkit-,
+  -moz-,
+  -ms-,
+  -o-,
+  '' {
+    #{$prefix}#{$property}: $value;
+  }
+}
+
+//@include css3(transition, 0.5s);
+
+// Sass Shape Mixin
+// http://css-tricks.com/examples/ShapesOfCSS/
+
+@mixin shape($shape, $size, $color) {
+
+  @if $shape ==square {
+    width: $size;
+    height: $size;
+    background-color: $color;
+  }
+
+  @if $shape ==circle {
+    width: $size;
+    height: $size;
+    background-color: $color;
+    border-radius: 50%;
+  }
+
+  @if $shape ==triangle {
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size*1.5 solid $color;
+  }
+
+  @if $shape ==right-triangle {
+    width: 0;
+    height: 0;
+    border-bottom: $size solid $color;
+    border-right: $size solid transparent;
+  }
+
+  @if $shape ==diamond {
+    width: 0;
+    height: 0;
+    border: $size solid transparent;
+    border-bottom-color: $color;
+    position: relative;
+    top: -$size;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -$size;
+      top: $size;
+      width: 0;
+      height: 0;
+      border: $size solid transparent;
+      border-top-color: $color;
+    }
+  }
+
+  @if $shape ==pentagon {
+    position: relative;
+    width: $size;
+    border-width: (25/27)*$size (
+      1/3)*$size 0;
+    border-style: solid;
+    border-color: $color transparent;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: (-17/11)*$size;
+      left: (-1/3)*$size;
+      border-width: 0 (5/6)*$size (
+        35/54)*$size;
+      border-style: solid;
+      border-color: transparent transparent $color;
+    }
+  }
+
+  @if $shape ==hexagon {
+    width: $size*2;
+    height: $size*1.1;
+    background: $color;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: $size/-2;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size/2 solid $color;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: $size/-2;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-top: $size/2 solid $color;
+    }
+  }
+
+  @if shape==octogon {
+    width: $size;
+    height: $size;
+    background: transparent;
+    position: relative;
+    text-align: center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-bottom: 29/$size solid $color;
+      border-left: 29/$size solid transparent;
+      border-right: 29/$size solid transparent;
+      width: 42/$size;
+      height: 0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-top: 29/$size solid $color;
+      border-left: 29/$size solid transparent;
+      border-right: 29/$size solid transparent;
+      width: 42/$size;
+      height: 0;
+    }
+  }
+}
+
+//@include shape(square/circle/triangle/right-triangle/diamond/pentagon/hexagon/octogon, $100px, #f00);
+
+//min-max-query
+@mixin min-max($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+//min-max-query
+@mixin min-max-height($min, $max) {
+  @media screen and (min-height: $min) and (max-height: $max) {
+    @content;
+  }
+}
+
+//custom-media query
+@mixin mq($screen, $custom) {
+  @if $screen =='min' {
+    @media (min-width: $custom) {
+      @content;
+    }
+  }
+
+  @else if $screen =='max' {
+    @media (max-width: $custom) {
+      @content;
+    }
+  }
+}
+
+
+//@include mg(min/max, any_size(400));

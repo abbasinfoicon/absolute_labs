@@ -1,0 +1,121 @@
+.community {
+    padding: 75px 0 104px;
+
+    @include mq(max, 1499px) {
+        padding: 75px 0 82px
+    }
+
+    &_content {
+        .title {
+            h3 {
+                font-size: 63.92px;
+                margin-bottom: 95px;
+
+                @include mq(max, 1900px) {
+                    margin-bottom: 45px;
+                }
+
+                @include mq(max, 1499px) {
+                    font-size: 50.92px;
+                }
+
+                @include mq(max, 1199px) {
+                    font-size: 40.92px;
+                }
+
+                span {
+                    display: inline-block;
+                }
+            }
+        }
+
+        h4 {
+            font-size: 24px;
+            color: $black;
+            @include MyriadPro(bold700);
+            margin-bottom: 40px;
+
+            @include mq(max, 1499px) {
+                font-size: 19px;
+                margin-bottom: 30px;
+            }
+
+            @include mq(max, 1199px) {
+                font-size: 15px;
+            }
+        }
+
+        p {
+            font-size: 24px;
+            color: $black;
+            @include MyriadPro(regular400);
+            font-style: italic;
+            letter-spacing: -0.49px;
+            line-height: 1.45;
+
+            @include mq(max, 1499px) {
+                font-size: 19px;
+
+                br {
+                    display: none;
+                }
+            }
+
+            @include mq(max, 1199px) {
+                font-size: 15px;
+            }
+        }
+    }
+
+    &_carousel {
+        margin: 0 auto 87px;
+
+        @include mq(max, 1900px) {
+            width: 88%;
+        }
+
+        .item {
+            &_style {
+                img {
+                    width: auto;
+                    margin: 0 auto;
+                    filter: grayscale(100%);
+
+
+                    &:hover {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+
+        .owl-nav {
+            &.disabled {
+                display: block;
+            }
+
+            .owl-prev,
+            .owl-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .owl-prev {
+                left: -12.5%;
+
+                @include mq(max, 1900px) {
+                    left: -6.5%;
+                }
+            }
+
+            .owl-next {
+                right: -12.5%;
+
+                @include mq(max, 1900px) {
+                    right: -6.5%;
+                }
+            }
+        }
+    }
+}

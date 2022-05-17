@@ -1,0 +1,149 @@
+// slider start
+.slider {
+    z-index: 10;
+
+    &_caption {
+        padding: 108px 45px;
+
+        @include mq(max, 1499px) {
+            padding: 88px 45px;
+        }
+        @include mq(max, 767px) {
+            padding: 15px;
+        }
+
+        h2 {
+            font-size: 50.2px;
+            @include campton(bold700);
+            text-transform: uppercase;
+
+            @include mq(max, 1499px) {
+                font-size: 40.2px;
+            }
+
+            @include mq(max, 1199px) {
+                font-size: 32.2px;
+            }
+
+            span {
+                display: block;
+                font-size: 86.28px;
+                margin-top: -10px;
+                margin-left: 15px;
+
+                @include mq(max, 1499px) {
+                    font-size: 68.28px;
+                }
+
+                @include mq(max, 1199px) {
+                    font-size: 55.28px;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .float-right {
+            float: right;
+            margin-top: -4px;
+            margin-bottom: 30px;
+
+            @include mq(max, 1499px) {
+                margin-top: -2px;
+                padding-right: 130px;
+            }
+
+            @include mq(max, 1199px) {
+                padding-right: 35px;
+            }
+            @include mq(max, 767px) {
+                padding-right: 100px;
+            }
+        }
+
+        p {
+            font-size: 24px;
+            @include campton(bold700);
+            text-transform: uppercase;
+            line-height: 1.3;
+
+            @include mq(max, 1499px) {
+                font-size: 19px;
+            }
+
+            @include mq(max, 1199px) {
+                font-size: 15.5px;
+            }
+        }
+    }
+
+    &_ssec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include full-width;
+        margin-bottom: 160px;
+
+        @include mq(max, 1499px) {
+            margin-bottom: 120px;
+        }
+        @include mq(max, 767px) {
+            margin-bottom: 70px;
+        }
+
+        &_learn-more {
+            padding-left: 114px;
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    &_video {
+        position: relative;
+        display: inline-block;
+
+        img {
+            display: block;
+
+            @include mq(max, 1499px) {
+                width: 80%;
+            }
+
+            @include mq(max, 1199px) {
+                width: 81%;
+                float: right;
+            }
+        }
+
+        &-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            img {
+                margin: 0 auto 20px;
+
+                @include mq(max, 1499px) {
+                    width: 39px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $bossanova;
+
+                @include mq(max, 1499px) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+// slider end

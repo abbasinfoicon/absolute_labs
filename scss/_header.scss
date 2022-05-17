@@ -1,0 +1,269 @@
+// header start
+.header {
+
+    &_logoMenu {
+        position: relative;
+        padding: 35px 0;
+
+        @include mq(max, 1199px) {
+            padding-top: 70px;
+        }
+
+        @include mq(max, 991px) {
+            padding-top: 35px;
+        }
+
+        @include mq(max, 767px) {
+            padding: 15px 0;
+        }
+
+        @include mq(max, 767px) {
+            padding-top: 20px;
+        }
+    }
+
+    &_logo {
+        position: relative;
+
+        @include mq(max, 767px) {
+            left: 35px;
+        }
+
+        a {
+            cursor: pointer;
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+    &_menu {
+
+
+        &-navbar {
+            @include mq(max, 991px) {
+                position: static;
+            }
+
+            .navbar-toggler {
+                outline: none;
+                border: none;
+
+                @include mq(max, 767px) {
+                    position: absolute;
+                    top: 28px;
+                }
+
+                @include mq(max, 767px) {
+                    top: 32px;
+                }
+
+                &:hover,
+                &:active,
+                &:focus {
+                    outline: none;
+                    border: none;
+                    box-shadow: none;
+                }
+
+                i {
+                    color: $carnation;
+                }
+            }
+
+            
+
+            &-nav {
+                margin: 0;
+                padding: 0;
+                font-style: 0;
+
+                @include mq(max, 991px) {
+                    position: absolute;
+                    background: $white;
+                    z-index: 9;
+                    top: 100px;
+                    left: 15px;
+                    right: 15px;
+                }
+
+                li {
+                    display: inline-block;
+
+                    @include mq(max, 991px) {
+                        display: block;
+                    }
+
+                    a {
+                        font-size: 13px;
+                        text-transform: uppercase;
+                        color: $black;
+                        @include campton(bold700);
+                        border-right: 2px solid $royal;
+                        min-width: 126px;
+                        text-align: center;
+                        padding: 14px;
+
+                        @include mq(max, 991px) {
+                            border-right: 0;
+                            border-bottom: 2px solid $royal;
+                        }
+
+                        @include mq(max, 1550px) {
+                            font-size: 12px;
+                            min-width: auto;
+                            padding: 7px 14px;
+                        }
+
+                        &:hover {
+                            color: $carnation;
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            border-color: $bossanova;
+
+                            &:hover {
+                                color: $bossanova;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        a {
+                            border-color: $royal;
+
+                            &:hover {
+                                color: $royal;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        a {
+                            border-color: $royal;
+
+                            &:hover {
+                                color: $royal;
+                            }
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        a {
+                            border-color: $carnation;
+
+                            &:hover {
+                                color: $carnation;
+                            }
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        a {
+                            border-color: #ffb4e6;
+
+                            &:hover {
+                                color: #ffb4e6;
+                            }
+                        }
+                    }
+
+                    &:nth-child(6) {
+                        a {
+                            border-color: $turquoise;
+
+                            &:hover {
+                                color: $turquoise;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        a {
+                            border-right: none;
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .custom-flex {
+            @include position(absolute, $top: 50%, $right: 8.5%);
+            @include transform(translateY(-50%));
+            display: flex;
+            align-items: center;
+
+            @include mq(max, 1850px) {
+                right: 35px;
+            }
+
+            @include mq(max, 1199px) {
+                top: 35px;
+            }
+
+            @include mq(max, 991px) {
+                top: 59px;
+            }
+
+            @include mq(max, 767px) {
+                top: 45px;
+            }
+
+            @include mq(max, 520px) {
+                right: 15px;
+            }
+
+            @include mq(max, 425px) {
+                top: 30px;
+                left: 0;
+                right: 0;
+                justify-content: center;
+            }
+        }
+
+        &_get-demo {
+            a {
+                font-size: 17px;
+                color: $white;
+                @include campton(bold700);
+                background-color: $royal;
+
+                @include mq(max, 520px) {
+                    font-size: 15px;
+                    padding: 5px 15px;
+                }
+            }
+        }
+
+        &_sign-in {
+            margin-left: 20px;
+
+            @include mq(max, 520px) {
+                margin-left: 10px;
+            }
+
+            a {
+                font-size: 13.5px;
+                text-transform: uppercase;
+                color: $bossanova;
+                @include MyriadPro(Semibold);
+
+                &:hover {
+                    color: $carnation;
+                }
+
+                img {
+                    position: relative;
+                    top: -1px;
+                    left: 7px;
+                }
+            }
+        }
+    }
+}
+
+// header end

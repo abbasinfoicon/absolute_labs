@@ -1,0 +1,103 @@
+// btn-wraper
+.btn-wraper {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 114px;
+
+   @include mq (max, 1499px){
+       
+   }
+
+    li {
+
+
+        a {
+            font-size: 20px;
+            @include campton(bold700);
+            color: $white;
+            text-transform: uppercase;
+
+            @include mq(max, 1499px) {
+                font-size: 15px;
+            }
+
+            @include mq(max, 1199px) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.triangle-btn {
+    position: relative;
+    overflow: hidden;
+
+    a {
+        display: inline-block;
+        background-color: $carnation;
+        filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFD209FA', endColorstr='#FF4F81D4');
+        background-image: -owg-linear-gradient($bossanova 1%, $carnation 100%);
+        background-image: -webkit-linear-gradient($bossanova 1%, $carnation 100%);
+        background-image: -moz-linear-gradient($bossanova 1%, $carnation 100%);
+        background-image: -o-linear-gradient($bossanova 1%, $carnation 100%);
+        background-image: linear-gradient($bossanova 1%, $carnation 100%);
+        padding: 73px 76px 73px 17px;
+        -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+        clip-path: polygon(0 0, 0% 100%, 100% 50%);
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+
+        @include mq(max, 1499px) {
+            padding: 55px 61px 55px 17px;
+        }
+
+        @include mq(max, 1199px) {
+            padding: 45px 44px 43px 14px;
+        }
+
+    }
+
+    &:before {
+        content: "";
+        transition: all 0.5s ease-out;
+        top: 1px;
+        bottom: 1px;
+        right: 0px;
+        width: 100%;
+        background-color: $bossanova;
+        background-image: -owg-linear-gradient($bossanova 1%, $carnation 100%);
+        background-image: -webkit-linear-gradient($bossanova 1%, $carnation 100%);
+        background-image: -moz-linear-gradient($bossanova 1%, $carnation 100%);
+        background-image: -o-linear-gradient($bossanova 1%, $carnation 100%);
+        background-image: linear-gradient($bossanova 1%, $carnation 100%);
+        position: absolute;
+        -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%, 0 98%, 95% 50%, 0 2%);
+        clip-path: polygon(0 0, 100% 50%, 0 100%, 0 98%, 95% 50%, 0 2%);
+    }
+
+    &:hover {
+        overflow: visible;
+
+        &:before {
+            overflow: visible;
+            -webkit-animation: circle-1 1s linear infinite;
+            animation: circle-1 1s linear infinite;
+        }
+    }
+}
+
+@-webkit-keyframes circle-1 {
+    100% {
+        right: -15px;
+        opacity: 0.1;
+    }
+}
+
+@keyframes circle-1 {
+    100% {
+        right: -15px;
+        opacity: 0.1;
+    }
+}

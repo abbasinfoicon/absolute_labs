@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('#{$fontPath}/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Myriad Pro Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Light'), url('#{$fontPath}/MyriadPro-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Myriad Pro Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Semibold'), url('#{$fontPath}/MYRIADPRO-SEMIBOLD.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Myriad Pro Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Bold'), url('#{$fontPath}/MYRIADPRO-BOLD.woff') format('woff');
+}
+
+
+
+// Campton
+@font-face {
+  font-family: 'Campton-black';
+  src: url('#{$fontPath}/CamptonBlack.eot');
+  src: url('#{$fontPath}/CamptonBlack.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}/CamptonBlack.woff2') format('woff2'),
+  url('#{$fontPath}/CamptonBlack.woff') format('woff'),
+  url('#{$fontPath}/CamptonBlack.ttf') format('truetype'),
+  url('#{$fontPath}/CamptonBlack.svg#Campton') format('svg');
+}
+
+@font-face {
+  font-family: 'Campton-bold';
+  src: url('#{$fontPath}/CamptonBold.eot');
+  src: url('#{$fontPath}/CamptonBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}/CamptonBold.woff2') format('woff2'),
+  url('#{$fontPath}/CamptonBold.woff') format('woff'),
+  url('#{$fontPath}/CamptonBold.ttf') format('truetype'),
+  url('#{$fontPath}/CamptonBold.svg#Campton') format('svg');
+}
+
+@font-face {
+  font-family: 'Campton-light';
+  src: url('#{$fontPath}/CamptonLight.eot');
+  src: url('#{$fontPath}/CamptonLight.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}/CamptonLight.woff2') format('woff2'),
+  url('#{$fontPath}/CamptonLight.woff') format('woff'),
+  url('#{$fontPath}/CamptonLight.ttf') format('truetype'),
+  url('#{$fontPath}/CamptonLight.svg#Campton') format('svg');
+}

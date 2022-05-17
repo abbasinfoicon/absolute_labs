@@ -1,0 +1,124 @@
+// commandChain start
+.commandChain {
+    .col-md-5 {
+        @include mq(max, 1199px) {
+            width: 100%;
+
+            .title {
+                text-align: left !important;
+            }
+        }
+    }
+
+    .bg-absolute {
+        background-image: url(../img/bg-background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        padding: 75px 0 0;
+        margin-bottom: 36px;
+
+        @include mq(max, 1199px) {
+            background-position: bottom;
+        }
+
+        .flex-direction {
+            @include mq(max, 1199px) {
+                flex-direction: column-reverse;
+
+                [class*="col-"] {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .commandChain_content {
+        &.stopping {
+            .title {
+                margin-bottom: -48px;
+
+                @include mq(max, 1199px) {
+                    margin-bottom: 0;
+                }
+
+                h3 {
+                    span {
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+
+        &-sss {
+            position: relative;
+            padding: 50px 0;
+
+            @include mq(min, 1900px) {
+                padding: 175px 0;
+            }
+
+            @include mq(max, 1199px) {
+                padding: 0;
+                margin-top: -50px;
+                padding-bottom: 120px;
+            }
+
+            h4 {
+                color: $white;
+                font-size: 31px;
+                @include MyriadPro(bold700);
+                line-height: 1.1;
+                margin-bottom: 38px;
+
+                @include mq(max, 1499px) {
+                    font-size: 25px;
+                }
+
+                @include mq(max, 1199px) {
+                    font-size: 16px;
+                }
+            }
+
+            p {
+                color: $white;
+                font-size: 31px;
+                @include MyriadPro(regular400);
+                line-height: 1.36;
+                margin-bottom: 60px;
+
+                @include mq(max, 1499px) {
+                    font-size: 25px;
+                }
+
+                @include mq(max, 1199px) {
+                    font-size: 16px;
+                }
+            }
+
+            a {
+                font-size: 19.58px;
+                color: $royal;
+                text-transform: uppercase;
+                background: $white;
+                display: inline-block;
+                @include campton(bold700);
+                padding: 20px 72px;
+                border-radius: 24px;
+                border: 1px solid $bossanova;
+
+                @include mq(max, 1499px) {
+                    font-size: 15.58px;
+                    padding: 15px 54px;
+                }
+
+                &:hover {
+                    background: $bossanova;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// commandChain end

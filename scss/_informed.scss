@@ -1,0 +1,189 @@
+.informed {
+    padding: 75px 0 82px;
+    background: $bossanova;
+    overflow: hidden;
+
+    @include mq(max, 1499px) {
+        padding: 60px 0 60px;
+    }
+
+    .right-bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: -4.5%;
+            top: 0;
+            bottom: 0;
+            width: 54.5%;
+            -webkit-transform: skewX(-10deg);
+            transform: skewX(-11.5deg);
+            background: $carnation;
+
+            @include mq(max, 991px) {
+                right: -6%
+            }
+
+            @include mq(max, 767px) {
+                right: -10%;
+                width: 60%;
+            }
+
+            @include mq(max, 767px) {
+                right: -15%;
+                width: 65%;
+            }
+
+            @include mq(max, 420px) {
+                right: -20%;
+                width: 70%;
+            }
+
+            @include mq(max, 350px) {
+                right: -25%;
+                width: 75%;
+            }
+        }
+    }
+
+
+    &_content {
+        .title {
+            h3 {
+                font-size: 63.92px;
+                color: $turquoise;
+                margin-bottom: 34px;
+
+                @include mq(max, 1499px) {
+                    font-size: 50.92px;
+                }
+                @include mq(max, 1199px) {
+                    font-size: 40.92px;
+                }
+
+                span {
+                    display: inline-block;
+                }
+            }
+
+            p {
+                color: $white;
+                line-height: 1.46;
+                padding-right: 30px;
+
+                @include mq(max, 1199px) {
+                    br {
+                        display: none;
+                    }
+                }
+
+                @include mq(max, 767px) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    &_newletter {
+        form {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+
+            @include mq(max, 380px) {
+                text-align: center;
+            }
+
+            label {
+                font-size: 18px;
+                color: $white;
+                @include campton(light300);
+                display: block;
+                text-transform: uppercase;
+                padding-left: 15px;
+                margin-bottom: 10px;
+
+                @include mq(max, 1499px) {
+                    font-size: 14px;
+                    margin-bottom: 1px;
+                }
+
+                @include mq(max, 1199px) {
+                    font-size: 13px;
+                }
+
+                @include mq(max, 380px) {
+                    padding-left: 0;
+                }
+            }
+
+            input {
+                height: 53px;
+                width: 68%;
+                border-radius: 20px;
+                border: 1px solid $bossanova;
+                font-size: 17px;
+                @include campton(bold700);
+                color: $bossanova;
+                padding: 10px 35px;
+                line-height: 53px;
+
+                @include mq(max, 1499px) {
+                    height: 43px;
+                    width: 55%;
+                    font-size: 13px;
+                    padding: 10px 31px;
+                    line-height: 43px;
+                }
+
+                @include mq(max, 767px) {
+                    width: 80%;
+                }
+
+                @include mq(max, 380px) {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+
+                &::placeholder {
+                    color: $bossanova;
+                }
+            }
+
+            .btn-ok {
+                font-size: 20px;
+                @include campton(bold700);
+                color: $bossanova;
+                text-transform: uppercase;
+                background-color: $turquoise;
+                border-radius: 20px;
+                border: 1px solid $bossanova;
+                height: 53px;
+                padding: 11px 17px;
+
+                @include mq(max, 1499px) {
+                    height: 43px;
+                    font-size: 14px;
+                    padding: 11px 17px
+                }
+
+                @include mq(max, 1199px) {
+                    font-size: 13px;
+                }
+
+
+                &:hover {
+                    background-color: $bossanova;
+                    color: $carnation;
+                }
+            }
+        }
+    }
+}

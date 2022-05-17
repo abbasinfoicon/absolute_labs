@@ -1,0 +1,153 @@
+.right_wallets {
+    margin-top: 160px;
+
+    @include mq(max, 1499px) {
+        margin-top: 48px;
+    }
+
+    &.commandChain {
+        position: relative;
+
+        .commandChain_img {
+            padding-bottom: 70px;
+        }
+
+        .commandChain_content {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.commandChain {
+    &_img {
+        &_right {
+            [class*="img-"] {
+                position: absolute;
+            }
+
+            @include mq(max, 767px) {
+                position: relative;
+            }
+
+            .img {
+                &-bbg {
+                    position: relative;
+                    z-index: 1;
+                    top: -200px;
+
+                    @include mq(min, 1921px) {
+                        position: absolute;
+                        top: 120px;
+                        right: 115px;
+                    }
+
+                    @include mq(max, 1499px) {
+                        top: -140px;
+                    }
+                    @include mq(max, 767px) {
+                        top: -75px;
+
+                    }
+                }
+
+                &-1 {
+                    position: relative;
+                    left: 60px;
+                    z-index: 1;
+
+                    @include mq(max, 1499px) {
+                        left: 52px;
+                        width: 64%;
+                    }
+                }
+
+                &-2 {
+                    bottom: 5px;
+                    right: 0;
+                    z-index: 1;
+
+                    @include mq(max, 1499px) {
+                        bottom: 21px;
+                        width: 53%;
+                    }
+
+                    @include mq(max, 767px) {
+                        bottom: -50px;
+                        width: 100%;
+                    }
+                }
+
+                &-3 {
+                    right: 0;
+                    z-index: 1;
+
+                    @include mq(max, 1499px) {
+                        width: 40%;
+                    }
+                    @include mq(max, 767px) {
+                        width: 70%;
+                        bottom: 4px;
+                    }
+                }
+
+                &-4 {
+                    right: 0;
+
+                    @include mq(max, 1499px) {
+                        width: 10%;
+                    }
+                    @include mq(max, 767px) {
+                        width: 17%;
+                        bottom: 0;
+                    }
+                }
+
+                &-4_1 {
+                    right: 0;
+                    z-index: 0;
+
+                    @include mq(max, 1499px) {
+                        width: 80%;
+                    }
+                }
+
+                &-5 {
+                    position: relative;
+                    top: -131px;
+                    left: 76px;
+                    z-index: 1;
+                }
+
+                &-6 {
+                }
+
+                &-7 {
+                    right: 0px;
+                    top: -135px;
+                }
+
+                &-8 {
+                    top: 109px;
+                    right: 6px;
+                }
+
+                &-9 {
+                    left: 73px;
+                    top: 10px;
+                }
+
+                &-10 {
+                }
+
+                &-11 {
+                }
+
+                &-12 {
+                }
+
+                &-13 {
+                }
+            }
+        }
+    }
+}

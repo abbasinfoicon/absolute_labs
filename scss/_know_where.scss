@@ -1,0 +1,154 @@
+.bg_heel-00 {
+    @include full-width;
+
+    &:before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/left-layer.png);
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 94.5%;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        bottom: 104px;
+        background-size: 51%;
+
+        @include mq(min, 1921px) {
+            bottom: 80px;
+        }
+
+        @include mq(max, 1499px) {
+            bottom: 190px;
+        }
+
+        @include mq(max, 768px) {
+            content: none;
+        }
+    }
+}
+
+.commandChain {
+    &.know_where {
+        position: relative;
+        z-index: 9;
+
+        .row {
+            @include mq(max, 767px) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        &:before {
+            content: "";
+            background-image: url(../img/left-layer.png);
+            position: absolute;
+
+            @include mq(max, 767px) {
+                height: 100%;
+                width: 100%;
+                background-position: top;
+                background-size: contain;
+                background-repeat: no-repeat;
+                bottom: -35px;
+            }
+        }
+
+        .commandChain_content {
+            padding: 70px 50px;
+
+            @include mq(max, 1499px) {
+                padding: 0px 50px;
+            }
+
+            @include mq(max, 767px) {
+                padding: 0px;
+                padding-bottom: 130px;
+            }
+        }
+
+        .commandChain_img {
+            position: relative;
+
+            @include mq(max, 1499px) {
+                top: -94px;
+                left: 20px;
+            }
+        }
+    }
+
+    &_img {
+        &_left {
+            [class*="img-"] {
+                position: absolute;
+            }
+
+            .img {
+                &-1 {
+                    position: relative;
+                    top: 15px;
+                    left: -31px;
+
+                    @include mq(min, 1921px) {
+                        top: 10px;
+                    }
+                }
+
+                &-2 {
+                    left: 8%;
+                    top: -15px;
+                }
+
+                &-3 {
+                    left: 60.5%;
+                    top: 27px;
+                }
+
+                &-4 {
+                    left: 83.5%;
+                    top: -23px;
+                }
+
+                &-5 {
+                    left: 66.6%;
+                    top: 120px;
+                }
+
+                &-6 {
+                    left: 13%;
+                    top: 61%;
+                }
+
+                &-7 {
+                    left: 25.7%;
+                    bottom: 85px;
+                }
+
+                &-8 {
+                    left: -24%;
+                    bottom: -5px;
+                }
+
+                &-9 {
+                    left: 45%;
+                    top: 83px;
+                }
+
+                &-10 {
+                    left: 27.5%;
+                    top: 130px;
+                }
+
+                &-11 {
+                    top: 55%;
+                    left: 44.7%;
+                }
+
+                &-12 {
+                    left: 9.5%;
+                    bottom: -3px;
+                }
+            }
+        }
+    }
+}
