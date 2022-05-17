@@ -45,28 +45,16 @@
         })
 
 
-        $('.community_carousel').owlCarousel({
+        $('.main-carousel').owlCarousel({
             loop: true,
-            margin: 0,
-            autoplay: false,
             nav: true,
-            dots: false,
+            items: 1,
             navText: [
                 "<img src='assets/img/left-icon.png' class='left-icon'>",
                 "<img src='assets/img/right-icon.png' class='right-icon'>"
             ],
+            autoplay: true,
             autoplayHoverPause: true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
         });
 
 
@@ -83,7 +71,60 @@
         });
         // popup-video-section end
 
+        // counter-start
+        $('.counter').counterUp({
+            delay: 10,
+            time: 2000
+        });
+        $('.counter').addClass('animated fadeInDownBig');
+        // counter-end
 
+
+        $('.experience-carousel').owlCarousel({
+            loop: true,
+            nav: true,
+            margin: 30,
+            navText: [
+                "<i class='fa-solid fa-arrow-left'></i>",
+                "<i class='fa-solid fa-arrow-right'></i>"
+            ],
+            autoplay: false,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+
+        $('.testimonials-carousel').owlCarousel({
+            loop: true,
+            nav: true,
+            margin: 5,
+            navText: [
+                "<i class='fa-solid fa-angle-left'></i>",
+                "<i class='fa-solid fa-angle-right'></i>"
+            ],
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
     });
 
 })(jQuery);
