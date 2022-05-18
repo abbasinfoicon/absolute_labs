@@ -272,6 +272,10 @@ input:visited {
   -webkit-animation: pre-loader 1.3s linear infinite;
 }
 
+.pre-loader span:first-child {
+  background: #ff5471;
+}
+
 .pre-loader span:last-child {
   animation-delay: -0.8s;
   -webkit-animation-delay: -0.8s;
@@ -299,6 +303,10 @@ input:visited {
     -webkit-transform: scale(1, 1);
     opacity: 0;
   }
+}
+
+.header {
+  z-index: 99;
 }
 
 .header_logoMenu {
@@ -346,6 +354,7 @@ input:visited {
 
 .header_logo a img {
   display: block;
+  height: 57px;
 }
 
 @media (max-width: 991px) {
@@ -393,10 +402,10 @@ input:visited {
   .header_menu-navbar-nav {
     position: absolute;
     background: #fff;
-    z-index: 9;
     top: 100px;
     left: 15px;
     right: 15px;
+    z-index: 999;
   }
 }
 
