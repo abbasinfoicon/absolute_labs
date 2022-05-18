@@ -1,60 +1,87 @@
 .bg__top {
-    @include full-width;
+  @include full-width;
+  height: 100%;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/layer-img.png);
+    right: 0;
+    z-index: 1;
+    width: 100%;
     height: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
 
-    &:after {
-        content: "";
-        position: absolute;
-        background-image: url(../img/layer-img.png);
-        right: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background-position: right;
-        background-repeat: no-repeat;
-
-        @include mq(max, 1499px) {
-            height: 92%;
-            background-size: 84%;
-        }
-        @include mq(max, 1199px) {
-            height: 85%;
-            background-size: 77%;
-        }
-        @include mq(max, 767px) {
-            background-size: 84%;
-        }
+    @include mq(max, 1499px) {
+      height: 92%;
+      background-size: 84%;
     }
-
-    &_right {
-        position: static;
-
-        img {
-            position: absolute;
-            right: 0;
-            bottom: -70px;
-
-            @include mq(max, 1499px) {
-                bottom: 85px;
-                width: 56%;
-            }
-        }
+    @include mq(max, 1199px) {
+      background-position: top right;
+      height: 85%;
+      background-size: 77%;
     }
+    @include mq(max, 1024px) {
+      height: 83%;
+    }
+    @include mq(max, 991px) {
+      height: 100%;
+      background-size: 74%;
+    }
+    @include mq(max, 767px) {
+        background-size: 100%;
+    }
+  }
+
+  &_right {
+    position: static;
+
+    img {
+      position: absolute;
+      right: 0;
+      bottom: -70px;
+
+      @include mq(max, 1499px) {
+        bottom: 85px;
+        width: 56%;
+      }
+
+      @include mq(max, 1199px) {
+        bottom: 115px;
+        width: 50%;
+      }
+      @include mq(max, 1024px) {
+        bottom: 125px;
+        width: 46%;
+      }
+
+      @include mq(max, 991px) {
+        display: none;
+      }
+    }
+  }
 }
 
 .commandChain {
-    &.chain {
-        z-index: 9;
+  &.chain {
+    z-index: 9;
 
-        .commandChain_content {
-            padding-bottom: 240px;
+    .commandChain_content {
+      padding-bottom: 240px;
 
-            @include mq(max, 1499px) {
-                padding-bottom: 285px;
-            }
-            @include mq(max, 767px) {
-                padding-bottom: 100px;
-            }
-        }
+      @include mq(max, 1499px) {
+        padding-bottom: 285px;
+      }
+      @include mq(max, 1024px) {
+        padding-bottom: 200px;
+      }
+      @include mq(max, 767px) {
+        padding-bottom: 100px;
+      }
+      @include mq(max, 425px) {
+        padding-bottom: 30px;
+      }
     }
+  }
 }

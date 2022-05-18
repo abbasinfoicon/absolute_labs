@@ -1,159 +1,215 @@
 .unbound {
-    background-image: url(../img/bg-img4.png);
-    background-position: right center;
-    background-repeat: no-repeat;
-    padding: 280px 0;
+  background-image: url(../img/bg-img4.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding: 280px 0;
 
-    @include mq(min, 2050px) {
-        background-size: contain;
-    }
+  @include mq(min, 2050px) {
+    background-size: contain;
+  }
 
-    @include mq(max, 1499px) {
-        padding: 179px 0;
-        background-size: 87%;
-    }
+  @include mq(max, 1499px) {
+    padding: 179px 0;
+    background-size: 87%;
+  }
+  @include mq(max, 1024px) {
+    padding: 80px 0;
+  }
 
+  @include mq(max, 991px) {
+    background-position: bottom 173px right;
+    padding: 70px 0;
+  }
+  @include mq(max, 767px) {
+    background-image: none;
+  }
+  @include mq(max, 425px) {
+    padding: 30px 0;
+  }
 
-    &.commandChain {
-        .commandChain_content {
-            h3 {
-                color: $white;
-                margin-bottom: 28px;
+  &.commandChain {
+    .commandChain_content {
+      h3 {
+        color: $white;
+        margin-bottom: 28px;
 
-                @include mq(max, 1499px) {
-                    margin-bottom: 52px;
-                    position: relative;
-                    top: 42px;
-                }
-
-                @include mq(max, 1199px) {
-                    margin-bottom: 30px;
-                }
-            }
-
-            .commandChain_content-unn {
-                background: $turquoise;
-                padding: 30px 47px;
-                position: relative;
-
-                @include mq(max, 1499px){
-                    top: 33px;
-                }
-
-                &:after {
-                    content: '';
-                    width: 0;
-                    height: 0;
-                    border-bottom: 26px solid $turquoise;
-                    border-left: 24px solid transparent;
-                    position: absolute;
-                    right: 0;
-                    top: -17px;
-                }
-
-                h4 {
-                    color: $black;
-                    @include MyriadPro(bold700);
-                    margin-bottom: 40px;
-
-                    @include mq(max, 1199px) {
-                        margin-bottom: 25px;
-                    }
-                }
-
-                p {
-                    color: $black;
-                    line-height: 1.45;
-                }
-            }
+        @include mq(max, 1499px) {
+          margin-bottom: 52px;
+          position: relative;
+          top: 42px;
         }
 
-        .commandChain_img {
-            .commandChain_img_left {
-                position: absolute;
-                left: 7%;
-                bottom: 140px;
-                width: 739px;
-                height: 710px;
-                overflow: hidden;
-
-                @include mq(max, 1499px) {
-                    left: 22px;
-                    width: 600px;
-                    height: 588px;
-                    top: 138px;
-                }
-
-                @include mq(max, 1199px) {
-                    left: 0;
-                }
-
-                @include mq(max, 767px) {
-                    top: 0;
-                }
-
-                // [class*="img-"] {
-                //     position: relative;
-                // }
-            }
+        @include mq(max, 1199px) {
+          margin-bottom: 30px;
         }
 
+        @include mq(max, 1024px) {
+          top: 70px;
+        }
 
+        @include mq(max, 991px) {
+          top: 0;
+        }
 
+        @include mq(max, 767px) {
+            color: $carnation;
+          }
+      }
+
+      .commandChain_content-unn {
+        background: $turquoise;
+        padding: 30px 47px;
+        position: relative;
+
+        @include mq(max, 1499px) {
+          top: 33px;
+        }
+
+        @include mq(max, 1024px) {
+          padding: 30px;
+          margin-left: auto;
+          width: 300px;
+          top: 60px;
+        }
+
+        @include mq(max, 1024px) {
+          width: 100%;
+          top: 0;
+        }
+
+        &:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-bottom: 26px solid $turquoise;
+          border-left: 24px solid transparent;
+          position: absolute;
+          right: 0;
+          top: -17px;
+        }
+
+        h4 {
+          color: $black;
+          @include MyriadPro(bold700);
+          margin-bottom: 40px;
+
+          @include mq(max, 1199px) {
+            margin-bottom: 25px;
+          }
+        }
+
+        p {
+          color: $black;
+          line-height: 1.45;
+        }
+      }
     }
 
+    .commandChain_img {
+        @include  mq(max, 767px){
+            margin-bottom: 30px;
+        }
 
+      .commandChain_img_left {
+        position: absolute;
+        left: 7%;
+        bottom: 140px;
+        width: 739px;
+        height: 710px;
+        overflow: hidden;
+
+        @include mq(max, 1499px) {
+          left: 22px;
+          width: 600px;
+          height: 588px;
+          top: 138px;
+        }
+
+        @include mq(max, 1199px) {
+          left: 0;
+        }
+        @include mq(max, 1024px) {
+          top: 60px;
+        }
+
+        @include mq(max, 767px) {
+          top: 0;
+        }
+
+        // [class*="img-"] {
+        //     position: relative;
+        // }
+      }
+    }
+  }
+
+  .text-start {
+    @include mq(max, 1024px) {
+      text-align: right !important;
+    }
+  }
+
+  .col-md-6 {
+    @include mq(max, 991px) {
+      width: 100%;
+    }
+  }
+}
+.desktop-hidden {
+  display: none;
+
+  @include mq(max, 991px) {
+    display: block;
+  }
+}
+.mobile-hidden {
+  @include mq(max, 991px) {
+    display: none;
+  }
 }
 
 .commandChain {
-
-
-    &_img {
-
-        &_left {
-
-            .img {
-
-                &-13 {
-                    left: 0;
-                    bottom: 13px;
-                    z-index: -1;
-                }
-
-                &-14 {
-                    bottom: 120px;
-                    z-index: 9;
-                    left: 220px;
-
-                    @include mq(max, 1499px) {
-                        width: 55%;
-                        bottom: 100px;
-                        left: 204px;
-                    }
-                }
-
-                &-15 {
-                    left: 20%;
-                    top: 20%;
-
-                    @include mq(max, 1499px) {
-                        left: 25.5%;
-                        top: 19%;
-                        width: 18%;
-                    }
-                }
-
-                &-16 {
-                    right: 0;
-                    top: 0;
-
-                    @include mq(max, 1499px) {
-                        width: 28.6%;
-                    }
-                }
-            }
+  &_img {
+    &_left {
+      .img {
+        &-13 {
+          left: 0;
+          bottom: 13px;
+          z-index: -1;
         }
+
+        &-14 {
+          bottom: 120px;
+          z-index: 9;
+          left: 220px;
+
+          @include mq(max, 1499px) {
+            width: 55%;
+            bottom: 100px;
+            left: 204px;
+          }
+        }
+
+        &-15 {
+          left: 20%;
+          top: 20%;
+
+          @include mq(max, 1499px) {
+            left: 25.5%;
+            top: 19%;
+            width: 18%;
+          }
+        }
+
+        &-16 {
+          right: 0;
+          top: 0;
+
+          @include mq(max, 1499px) {
+            width: 28.6%;
+          }
+        }
+      }
     }
-
-
+  }
 }

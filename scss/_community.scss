@@ -5,6 +5,14 @@
         padding: 75px 0 82px
     }
 
+    @include mq(max, 991px) {
+        padding-top: 0;
+    }
+
+    @include mq(max, 991px) {
+        padding-bottom: 30px;
+    }
+
     &_content {
         .title {
             h3 {
@@ -22,7 +30,9 @@
                 @include mq(max, 1199px) {
                     font-size: 40.92px;
                 }
-
+                @include mq(max, 991px) {
+                    font-size: 24px;
+                }
                 span {
                     display: inline-block;
                 }

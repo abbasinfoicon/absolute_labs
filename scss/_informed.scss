@@ -67,6 +67,9 @@
                 @include mq(max, 1199px) {
                     font-size: 40.92px;
                 }
+                @include mq(max, 991px) {
+                    font-size: 24px;
+                }
 
                 span {
                     display: inline-block;

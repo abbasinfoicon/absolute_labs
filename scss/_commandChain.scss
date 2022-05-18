@@ -2,10 +2,13 @@
 .commandChain {
     .col-md-5 {
         @include mq(max, 1199px) {
+            width: 50%;
+        }
+        @include mq(max, 1024px) {
             width: 100%;
 
-            .title {
-                text-align: left !important;
+            .text-end {
+                text-align: left!important;
             }
         }
     }
@@ -60,7 +63,7 @@
 
             @include mq(max, 1199px) {
                 padding: 0;
-                margin-top: -50px;
+                margin-top: -120px;
                 padding-bottom: 120px;
             }
 
@@ -77,6 +80,7 @@
 
                 @include mq(max, 1199px) {
                     font-size: 16px;
+                    margin-bottom: 20px;
                 }
             }
 
@@ -93,6 +97,7 @@
 
                 @include mq(max, 1199px) {
                     font-size: 16px;
+                    margin-bottom: 20px;
                 }
             }
 
@@ -115,6 +120,16 @@
                 &:hover {
                     background: $bossanova;
                     color: $white;
+                }
+            }
+        }
+    }
+
+    &.nothing_stopping{
+        .commandChain_content{
+            .text-end{
+                @include mq(max, 1199px) {
+                    text-align: left!important;
                 }
             }
         }

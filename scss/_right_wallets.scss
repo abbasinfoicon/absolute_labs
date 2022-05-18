@@ -1,153 +1,203 @@
 .right_wallets {
-    margin-top: 160px;
+  margin-top: 160px;
 
-    @include mq(max, 1499px) {
-        margin-top: 48px;
+  @include mq(max, 1499px) {
+    margin-top: 48px;
+  }
+  @include mq(max, 767px) {
+    margin-top: 0;
+  }
+
+  .row {
+    @include mq(max, 991px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .col-md-5 {
+    @include mq(max, 1199px) {
+      width: 41.66666667%;
     }
 
-    &.commandChain {
-        position: relative;
-
-        .commandChain_img {
-            padding-bottom: 70px;
-        }
-
-        .commandChain_content {
-            margin-bottom: 30px;
-        }
+    @include mq(max, 991px) {
+      width: 100%;
     }
+  }
+
+  .col-md-7 {
+    @include mq(max, 991px) {
+      width: 100%;
+    }
+  }
+
+  &.commandChain {
+    position: relative;
+
+    .commandChain_img {
+      padding-bottom: 70px;
+    }
+
+    .commandChain_content {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .commandChain {
-    &_img {
-        &_right {
-            [class*="img-"] {
-                position: absolute;
-            }
+  &_img {
+    &_right {
+      [class*="img-"] {
+        position: absolute;
+      }
 
-            @include mq(max, 767px) {
-                position: relative;
-            }
+      @include mq(max, 991px) {
+        position: relative;
+      }
 
-            .img {
-                &-bbg {
-                    position: relative;
-                    z-index: 1;
-                    top: -200px;
+      .img {
+        &-bbg {
+          position: relative;
+          z-index: 1;
+          top: -200px;
 
-                    @include mq(min, 1921px) {
-                        position: absolute;
-                        top: 120px;
-                        right: 115px;
-                    }
+          @include mq(min, 1921px) {
+            position: absolute;
+            top: 120px;
+            right: 115px;
+          }
 
-                    @include mq(max, 1499px) {
-                        top: -140px;
-                    }
-                    @include mq(max, 767px) {
-                        top: -75px;
-
-                    }
-                }
-
-                &-1 {
-                    position: relative;
-                    left: 60px;
-                    z-index: 1;
-
-                    @include mq(max, 1499px) {
-                        left: 52px;
-                        width: 64%;
-                    }
-                }
-
-                &-2 {
-                    bottom: 5px;
-                    right: 0;
-                    z-index: 1;
-
-                    @include mq(max, 1499px) {
-                        bottom: 21px;
-                        width: 53%;
-                    }
-
-                    @include mq(max, 767px) {
-                        bottom: -50px;
-                        width: 100%;
-                    }
-                }
-
-                &-3 {
-                    right: 0;
-                    z-index: 1;
-
-                    @include mq(max, 1499px) {
-                        width: 40%;
-                    }
-                    @include mq(max, 767px) {
-                        width: 70%;
-                        bottom: 4px;
-                    }
-                }
-
-                &-4 {
-                    right: 0;
-
-                    @include mq(max, 1499px) {
-                        width: 10%;
-                    }
-                    @include mq(max, 767px) {
-                        width: 17%;
-                        bottom: 0;
-                    }
-                }
-
-                &-4_1 {
-                    right: 0;
-                    z-index: 0;
-
-                    @include mq(max, 1499px) {
-                        width: 80%;
-                    }
-                }
-
-                &-5 {
-                    position: relative;
-                    top: -131px;
-                    left: 76px;
-                    z-index: 1;
-                }
-
-                &-6 {
-                }
-
-                &-7 {
-                    right: 0px;
-                    top: -135px;
-                }
-
-                &-8 {
-                    top: 109px;
-                    right: 6px;
-                }
-
-                &-9 {
-                    left: 73px;
-                    top: 10px;
-                }
-
-                &-10 {
-                }
-
-                &-11 {
-                }
-
-                &-12 {
-                }
-
-                &-13 {
-                }
-            }
+          @include mq(max, 1499px) {
+            top: -140px;
+          }
+          @include mq(max, 767px) {
+            top: -120px;
+          }
         }
+
+        &-1 {
+          position: relative;
+          left: 60px;
+          z-index: 1;
+
+          @include mq(max, 1499px) {
+            left: 48px;
+            width: 66%;
+          }
+          @include mq(max, 1199px) {
+            left: 2px;
+            width: 75%;
+          }
+          @include mq(max, 991px) {
+            left: 0;
+            width: 100%;
+          }
+        }
+
+        &-2 {
+          bottom: 5px;
+          right: 0;
+          z-index: 1;
+
+          @include mq(max, 1499px) {
+            bottom: 16px;
+            width: 53%;
+          }
+
+          @include mq(max, 1499px) {
+            bottom: 25px;
+            width: 55%;
+          }
+          @include mq(max, 1499px) {
+            bottom: 32px;
+          }
+
+          @include mq(max, 991px) {
+            bottom: -30px;
+            width: 100%;
+            background: $white;
+          }
+          @include mq(max, 767px) {
+            bottom: -20px;
+          }
+        }
+
+        &-3 {
+          right: 0;
+          z-index: 1;
+
+          @include mq(max, 1499px) {
+            width: 35.5%;
+          }
+
+          @include mq(max, 1499px) {
+            width: 38%;
+          }
+
+          @include mq(max, 991px) {
+            width: 100%;
+            bottom: 20px;
+          }
+        }
+
+        &-4 {
+          right: 0;
+
+          @include mq(max, 1499px) {
+            width: 9.1%;
+          }
+
+          @include mq(max, 991px) {
+            width: 25%;
+            bottom: 0;
+          }
+        }
+
+        &-4_1 {
+          right: 0;
+          z-index: 0;
+
+          @include mq(max, 1499px) {
+            width: 80%;
+          }
+        }
+
+        &-5 {
+          position: relative;
+          top: -131px;
+          left: 76px;
+          z-index: 1;
+        }
+
+        &-6 {
+        }
+
+        &-7 {
+          right: 0px;
+          top: -135px;
+        }
+
+        &-8 {
+          top: 109px;
+          right: 6px;
+        }
+
+        &-9 {
+          left: 73px;
+          top: 10px;
+        }
+
+        &-10 {
+        }
+
+        &-11 {
+        }
+
+        &-12 {
+        }
+
+        &-13 {
+        }
+      }
     }
+  }
 }
