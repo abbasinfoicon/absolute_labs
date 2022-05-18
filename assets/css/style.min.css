@@ -700,6 +700,12 @@ input:visited {
   }
 }
 
+@media (max-width: 767px) {
+  .slider_caption h2 span {
+    font-size: 28px;
+  }
+}
+
 .slider_caption .float-right {
   float: right;
   margin-top: -4px;
@@ -1047,10 +1053,6 @@ input:visited {
   .commandChain .commandChain_content.stopping .title {
     margin-bottom: 0;
   }
-}
-
-.commandChain .commandChain_content.stopping .title h3 span {
-  margin-bottom: 8px;
 }
 
 .commandChain .commandChain_content-sss {
