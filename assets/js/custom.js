@@ -45,6 +45,18 @@
         })
 
 
+        // Sticky Header Js start
+        $(window).on('scroll', function () {
+            var scroll = $(window).scrollTop();
+            if (scroll < 130) {
+                $(".header_logoMenu").removeClass("sticky");
+            } else {
+                $(".header_logoMenu").addClass("sticky");
+            }
+        });
+        // Sticky Header Js end
+
+
         $('.community_carousel').owlCarousel({
             loop: true,
             margin: 0,
@@ -56,15 +68,15 @@
                 "<img src='assets/img/right-icon.png' class='right-icon'>"
             ],
             autoplayHoverPause: true,
-            responsive:{
-                0:{
-                    items:1
+            responsive: {
+                0: {
+                    items: 1
                 },
-                600:{
-                    items:3
+                600: {
+                    items: 3
                 },
-                1000:{
-                    items:5
+                1000: {
+                    items: 5
                 }
             }
         });
@@ -83,7 +95,8 @@
         });
         // popup-video-section end
 
-
+        // WOW active
+        new WOW().init();
     });
 
 })(jQuery);
