@@ -163,39 +163,68 @@
 
         &-5 {
           position: relative;
-          top: -131px;
-          left: 76px;
+          top: -166px;
+          left: -12px;
           z-index: 1;
         }
 
         &-6 {
+          top: 93px;
+          right: 255px;
         }
 
         &-7 {
-          right: 0px;
-          top: -135px;
+          right: 410px;
+          top: 146px;
         }
 
         &-8 {
-          top: 109px;
-          right: 6px;
+          right: 393px;
+          top: 366px;
         }
 
         &-9 {
-          left: 73px;
-          top: 10px;
+          top: 292px;
+          right: 847px;
         }
 
         &-10 {
+          top: 404px;
+          right: 175px;
         }
 
         &-11 {
+          top: 275px;
+          right: 130px;
         }
 
         &-12 {
+          top: 321px;
+          right: 314px;
         }
 
         &-13 {
+          left: 44.6%;
+          top: 36.5%;
+        }
+        &-flesh {
+          left: 48%;
+          top: 38.5%;
+        }
+      }
+
+
+      .desktop-none {
+        display: none;
+
+        @include mq(max, 1499px) {
+          display: block;
+        }
+      }
+
+      .mobile-none {
+        @include mq(max, 1499px) {
+          display: none;
         }
       }
     }
