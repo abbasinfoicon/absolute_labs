@@ -5,8 +5,8 @@
     padding: 0px;
     padding-left: 114px;
 
-   @include mq (max, 1499px){
-       
+   @include mq (max, 767px){
+    padding-left: 30px;
    }
 
     li {

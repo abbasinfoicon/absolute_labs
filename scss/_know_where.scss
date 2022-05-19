@@ -76,7 +76,7 @@
 
             @include mq(max, 1499px) {
                 top: -94px;
-                left: 20px;
+                padding-left: 20px;
             }
 
             @include mq(max, 991px) {

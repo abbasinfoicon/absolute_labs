@@ -21,6 +21,21 @@
     @include mq(max, 425px) {
       padding-top: 60px;
     }
+
+    &.sticky {
+      left: 0;
+      top: 0;
+      width: 100%;
+      margin: auto;
+      position: fixed !important;
+      background: #ffffff;
+      @include box-shadow(0 0 70px 0 rgba(29, 35, 58, 0.12));
+      animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+      -webkit-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+      -moz-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+      -o-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+      z-index: 99;
+    }
   }
 
   &_logo {
@@ -59,14 +74,15 @@
         @include mq(max, 767px) {
           position: absolute;
           top: 28px;
+          padding-left: 5px;
         }
 
         @include mq(max, 767px) {
           top: 32px;
         }
         @include mq(max, 425px) {
-            top: 15px;
-            z-index: 9;
+          top: 15px;
+          z-index: 9;
         }
 
         &:hover,
@@ -226,12 +242,13 @@
       }
 
       @include mq(max, 425px) {
-        top: 25px;
+        top: 26px;
         left: 0;
         right: 0;
         justify-content: flex-end;
         background: $turquoise;
-        padding: 10px;
+        padding: 10px 15px;
+        padding-right: 20px;
       }
     }
 

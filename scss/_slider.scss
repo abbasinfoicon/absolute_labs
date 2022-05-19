@@ -29,6 +29,7 @@
       @include mq(max, 1199px) {
         font-size: 32.2px;
       }
+
       @include mq(max, 991px) {
         font-size: 20px;
         margin-bottom: 10px;
@@ -51,6 +52,10 @@
 
         @include mq(max, 991px) {
           font-size: 32px;
+        }
+
+        @include mq(max, 767px) {
+            font-size: 28px;
         }
       }
     }

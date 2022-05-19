@@ -39,8 +39,8 @@
 
     img {
       position: absolute;
-      right: 0;
-      bottom: -70px;
+      right: -88px;
+      bottom: -160px;
 
       @include mq(max, 1499px) {
         bottom: 85px;

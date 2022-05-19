@@ -11,25 +11,26 @@ body {
   margin: 0;
   padding: 0;
   @include MyriadPro(regular400);
+
+  overflow-x: hidden!important;
 }
 
 .container {
-  @include mq(min, 1366px){
+  @include mq(min, 1366px) {
     max-width: 1313px;
   }
 
-  @include mq(min, 1500px){
+  @include mq(min, 1500px) {
     max-width: 1475px;
   }
 
-  @include mq(max, 767px){
+  @include mq(max, 767px) {
     max-width: 100%;
   }
 }
 /*=====================================================================
 ==========================   font-face  =========================
 ========================================================================*/
-
 
 a,
 a:hover,
@@ -38,7 +39,7 @@ a:focus,
 a:link,
 a:visited {
   text-decoration: none;
-  @include transition(.5s);
+  @include transition(0.5s);
 }
 
 ul {
@@ -59,7 +60,7 @@ li,
 ul {
   margin: 0;
   padding: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .vertical-block {
@@ -81,7 +82,6 @@ input {
   @include border-radius(0);
   @include box-shadow(none);
 
-
   &:focus,
   &:active,
   &:visited {
@@ -89,9 +89,6 @@ input {
     @include box-shadow(none);
   }
 }
-
-
-
 
 //main-scss
 

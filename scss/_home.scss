@@ -44,10 +44,14 @@ section {
             @include mq(max, 991px) {
                 font-size: 24px;
             }
+            @include mq(max, 767px) {
+                margin: 5px;
+            }
 
             span{
                 @include campton(light300);
                 display: inline-block;
+                margin: 0;
             }
         }
     }

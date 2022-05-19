@@ -1,168 +1,176 @@
 // footer start
 .footer {
-    &_top {
-        background: #dad3df;
-        padding: 52px 0 31px;
+  &_top {
+    background: #dad3df;
+    padding: 52px 0 31px;
 
-        @include mq(max, 1499px) {
-            padding: 43px 0 18px
-        }
+    @include mq(max, 1499px) {
+      padding: 43px 0 18px;
+    }
+  }
+
+  &_menu {
+    h3 {
+      font-size: 20px;
+      @include campton(bold700);
+      color: $black;
+      margin-bottom: 8px;
+
+      @include mq(max, 1499px) {
+        font-size: 16px;
+      }
     }
 
-    &_menu {
-        h3 {
-            font-size: 20px;
-            @include campton(bold700);
-            color: $black;
-            margin-bottom: 8px;
+    ul {
+      margin-bottom: 45px;
 
-            @include mq(max, 1499px) {
-                font-size: 16px;
-            }
-        }
+      @include mq(max, 1499px) {
+        margin-bottom: 35px;
+      }
 
-        ul {
-            margin-bottom: 45px;
+      @include mq(max, 767px) {
+        margin-bottom: 20px;
+      }
 
-            @include mq(max, 1499px) {
-                margin-bottom: 35px;
-            }
-
-            @include mq(max, 767px) {
-                margin-bottom: 20px;
-            }
-
-            li {
-                a {
-                    font-size: 20px;
-                    @include campton(light300);
-                    color: $black;
-                    display: block;
-                    margin-bottom: 5px;
-
-                    @include mq(max, 1499px) {
-                        font-size: 16px;
-                        margin-bottom: 4px;
-                    }
-
-                    &:hover {
-                        color: $royal;
-                    }
-                }
-            }
-        }
-    }
-
-    &_logo {
-        position: relative;
-
-        @include mq(max, 767px) {
-            margin-bottom: 20px;
-        }
-
+      li {
         a {
-            display: inline-block;
+          font-size: 20px;
+          @include campton(light300);
+          color: $black;
+          display: block;
+          margin-bottom: 5px;
 
-            img {
-                height: 48px;
-                width: auto;
-                mix-blend-mode: multiply;
+          @include mq(max, 1499px) {
+            font-size: 16px;
+            margin-bottom: 4px;
+          }
 
-                @include mq(max, 1499px) {}
-            }
+          &:hover {
+            color: $royal;
+          }
         }
+      }
     }
+  }
 
-    &_bottom {
-        position: relative;
-        background: #343434;
-        padding: 15px 0;
-
-        &_menu {
-            position: relative;
-
-            ul {
-                font-size: 0;
-
-                li {
-                    display: inline-block;
-
-                    @include mq(max, 767px) {
-                        display: block;
-                    }
-
-                    a {
-                        font-size: 14px;
-                        @include campton(light300);
-                        color: $white;
-                        padding: 1px 12px;
-                        display: block;
-                        letter-spacing: 0.1px;
-
-                        @include mq(max, 1499px) {
-                            font-size: 11px;
-                        }
-
-                        @include mq(max, 767px) {
-                            padding: 1px 10px;
-                        }
-
-                        &:hover {
-                            color: $carnation;
-                        }
-                    }
-
-                    &:first-child {
-                        a {
-                            padding-left: 0;
-
-                            @include mq(max, 767px) {
-                                padding: 1px 10px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.w53p {
-    width: 53%;
-
-    @include mq(max, 1199px) {
-        width: 100%;
-    }
-}
-
-.get-demo {
-    text-align: right;
+  &_logo {
     position: relative;
 
     @include mq(max, 767px) {
-        text-align: left;
+      margin-bottom: 20px;
     }
 
-    &-btn {
-        font-size: 17px;
-        color: $white;
-        @include campton(bold700);
-        background-color: $royal;
-        border-radius: 35px;
-        padding: 10px 30px;
-        display: inline-block;
-        @include transition(.5s);
+    a {
+      display: inline-block;
+
+      img {
+        height: 48px;
+        width: auto;
+        mix-blend-mode: multiply;
 
         @include mq(max, 1499px) {
-            font-size: 14px;
-            padding: 7px 22px;
         }
-
-        &:hover {
-            background-color: $carnation;
-            color: $white;
-        }
+      }
     }
+  }
+
+  &_bottom {
+    position: relative;
+    background: #343434;
+    padding: 15px 0;
+
+    &_menu {
+      position: relative;
+
+      @include mq(max, 767px) {
+        text-align: center;
+      }
+
+      ul {
+        font-size: 0;
+
+        li {
+          display: inline-block;
+
+          @include mq(max, 767px) {
+            display: block;
+          }
+
+          a {
+            font-size: 14px;
+            @include campton(light300);
+            color: $white;
+            padding: 1px 12px;
+            display: block;
+            letter-spacing: 0.1px;
+
+            @include mq(max, 1499px) {
+              font-size: 11px;
+            }
+
+            @include mq(max, 767px) {
+              padding: 1px 10px;
+              border-bottom: 1px solid #4c4c4c;
+              padding-bottom: 5px;
+              margin-bottom: 5px;
+            }
+
+            &:hover {
+              color: $carnation;
+            }
+          }
+
+          &:first-child {
+            a {
+              padding-left: 0;
+
+              @include mq(max, 767px) {
+                padding: 1px 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.w53p {
+  width: 53%;
+
+  @include mq(max, 1199px) {
+    width: 100%;
+  }
+}
+
+.get-demo {
+  text-align: right;
+  position: relative;
+
+  @include mq(max, 767px) {
+    text-align: left;
+  }
+
+  &-btn {
+    font-size: 17px;
+    color: $white;
+    @include campton(bold700);
+    background-color: $royal;
+    border-radius: 35px;
+    padding: 10px 30px;
+    display: inline-block;
+    @include transition(0.5s);
+
+    @include mq(max, 1499px) {
+      font-size: 14px;
+      padding: 7px 22px;
+    }
+
+    &:hover {
+      background-color: $carnation;
+      color: $white;
+    }
+  }
 }
 
 // footer end
