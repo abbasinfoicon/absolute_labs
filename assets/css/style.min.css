@@ -353,6 +353,7 @@ input:visited {
   -moz-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
   -o-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
   z-index: 99;
+  padding: 10px 0;
 }
 
 .header_logo {
@@ -1236,8 +1237,8 @@ input:visited {
 
 .bg__top_right img {
   position: absolute;
-  right: -88px;
-  bottom: -160px;
+  right: 0;
+  bottom: -70px;
 }
 
 @media (max-width: 1499px) {
