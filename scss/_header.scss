@@ -292,6 +292,29 @@
       }
     }
   }
+
+  &_pos-abs {
+    @include mq(min, 1850px) {
+      position: absolute;
+      right: 0;
+
+      .header_menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 7px;
+
+        &-navbar {
+          justify-content: flex-end;
+        }
+
+        .custom-flex {
+          position: static;
+          transform: inherit;
+        }
+      }
+    }
+  }
 }
 
 // header end
